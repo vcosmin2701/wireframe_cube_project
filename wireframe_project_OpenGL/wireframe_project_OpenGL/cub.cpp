@@ -58,7 +58,6 @@ void CALLBACK display()
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     glColor3f(1.0f, 0.0f, 0.0f);
     
-    
     glBegin(GL_TRIANGLES);
     //Back
     glVertex3f(100.0f, -100.0f, -100.0f);
@@ -102,7 +101,6 @@ void CALLBACK display()
     glVertex3f(-100.0f, 100.0f, -100.0f);
     glVertex3f(-100.0f, 100.0f, 100.0f);
     glVertex3f(-100.0f, -100.0f, 100.0f);
-
     glEnd();
 
     glFlush();
@@ -114,7 +112,7 @@ void CALLBACK myReshape(GLsizei w, GLsizei h)
     glViewport(0, 0, w, h);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(45.0, (GLfloat)w / (GLfloat)h, 1.0, 1000.0);
+    gluPerspective(45.0, (GLfloat)w / (GLfloat)h, 10.0, 1000.0);
     glMatrixMode(GL_MODELVIEW);
 }
 
